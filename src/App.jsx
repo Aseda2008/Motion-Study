@@ -5,6 +5,8 @@ import Header from './components/Layout/Header/Header'
 import Main from './components/Main/Main'
 import { useContext } from 'react'
 import { MotionStudyContext } from './context'
+import StudyAbroad from './components/Pages/StudyAbroad/StudyAbroad'
+import HeaderMenu from './components/Layout/HeaderManu/HeaderMenu'
 
 function App() {
   const {modal} = useContext(MotionStudyContext)
@@ -13,15 +15,29 @@ function App() {
       id:1,
       path:"/",
       element:<Main />
+    },
+      {
+      id:2,
+      path:"/studyabroad",
+      element: <StudyAbroad />
     }
   ]
   return (
-   <>
- {!modal && <Header />}
-<Routes>
-{router.map((el) => <Route path={el.path} element={el.element}/>)}
-</Routes>
-   </>
+ <>
+  {modal ? (
+    <HeaderMenu />
+  ) : (
+    <>
+      <Header />
+      <Routes>
+        {router.map((el) => (
+          <Route key={el.id} path={el.path} element={el.element} />
+        ))}
+      </Routes>
+    </>
+  )}
+</>
+
   )
 }
 

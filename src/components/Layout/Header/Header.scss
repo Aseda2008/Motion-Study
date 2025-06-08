@@ -64,6 +64,17 @@ border-radius: 8px;
         color: black;
         font-weight: 500;
         font-size: 15px;
+            &.active::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background-color: #ff6a6a;
+      border-radius: 50%;
+    }
     }
 
 
@@ -168,7 +179,7 @@ a{
 }
 }
 }
-@media (max-width: 567px) {
+@media (max-width: 575px) {
   #Header .Header--nav {
   display: none;
 }

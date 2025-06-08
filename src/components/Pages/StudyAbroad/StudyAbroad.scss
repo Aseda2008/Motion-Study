@@ -1,0 +1,112 @@
+#StudyAbroud{
+    .StudyAbroud{
+h1{
+font-family: "Montserrat", sans-serif;
+font-weight: 500;
+font-size: 48px;
+margin: 30px 0 50px 0;
+}
+&--select{
+    margin: 30px 0 80px 0;
+    display: none;
+    align-items: center;
+      display: flex;
+    gap: 80px;
+    h2{
+font-weight: 500;
+font-size: 18px;
+color: #010D39;
+position: relative;
+a{
+color: #E8C94D;
+position: absolute;
+top: 5px;
+right: -24px;
+}
+
+
+    }
+}
+        &--block{
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            &__country{
+                width: 225px;
+                height: 285px;
+                -webkit-box-shadow: 0px 0px 17px -0px rgba(66, 68, 90, 0.34);
+                -moz-box-shadow: 0px 0px 17px -0px rgba(66, 68, 90, 0.34);
+                box-shadow: 0px 0px 17px -0px rgba(66, 68, 90, 0.34);
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                border-radius: 14px;
+                gap: 20px;  
+                img{
+                    width:100%;
+                    height: 190px;
+                 }
+                 p{
+font-family: "Montserrat", sans-serif;
+font-weight: 400;
+font-size: 22px;
+                 }
+            }
+        }
+    }
+}
+@media(max-width:992px){
+#StudyAbroud .StudyAbroud--select {
+    display: flex;
+}
+#StudyAbroud .StudyAbroud h1 {
+    font-size: 38px;
+}
+#StudyAbroud .StudyAbroud--block__country p {
+    font-size: 22px;
+}
+}
+ @media(max-width:575px){
+#StudyAbroud .StudyAbroud h1 {
+        font-size: 28px;
+        margin: 51px 0 29px 0;
+}
+#StudyAbroud .StudyAbroud--select h2 {
+    font-size:13px; 
+}
+    #StudyAbroud .StudyAbroud--select h2 a {
+        font-size: 25px;
+        top: -1px;
+    right: -28px;
+    }
+#StudyAbroud .StudyAbroud--select {
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: 29px 0 53px 0;
+}
+#StudyAbroud .StudyAbroud--block__country p {
+        font-size: 18px;
+    }
+#StudyAbroud .StudyAbroud--block {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+#StudyAbroud .StudyAbroud--block__country {
+    width: 315px;
+    height: 60px;
+    gap: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+flex-direction:row;
+-webkit-box-shadow: 0px 0px 0px 1px rgba(87, 93, 157, 1);
+-moz-box-shadow: 0px 0px 0px 1px rgba(87, 93, 157, 1);
+box-shadow: 0px 0px 0px 1px rgba(87, 93, 157, 1);
+
+}
+#StudyAbroud .StudyAbroud--block__country img {
+    width: 48px;
+    height: 48px;
+}
+ }
