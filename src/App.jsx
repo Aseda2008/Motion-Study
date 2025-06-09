@@ -7,6 +7,7 @@ import { useContext } from 'react'
 import { MotionStudyContext } from './context'
 import StudyAbroad from './components/Pages/StudyAbroad/StudyAbroad'
 import HeaderMenu from './components/Layout/HeaderManu/HeaderMenu'
+import Details from './components/Pages/StudyAbroad/Details/Details'
 
 function App() {
   const {modal} = useContext(MotionStudyContext)
@@ -20,7 +21,12 @@ function App() {
       id:2,
       path:"/studyabroad",
       element: <StudyAbroad />
-    }
+    },
+     {
+      id:3,
+      path:"/details",
+      element: <Details />
+    },
   ]
   return (
  <>

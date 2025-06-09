@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react';
-import "./HeaderManu.scss"
 import { GrClose } from 'react-icons/gr';
 import { PiInstagramLogoFill, PiPhoneCallFill } from 'react-icons/pi';
 import { CgMail } from 'react-icons/cg';
 import { FaTelegramPlane } from 'react-icons/fa';
 import Motion from "../../../assets/img/motion.svg"
 import { MotionStudyContext } from '../../../context';
+import { BsFillEnvelopeFill } from 'react-icons/bs';
 const HeaderMenu = () => {
     const {modal,setModal} = useContext(MotionStudyContext)
     const [activeLanguage, setActiveLanguage] = useState(null); 
@@ -13,7 +13,7 @@ const HeaderMenu = () => {
     const menuItems = [
   { name: "Home", link: "/" },
   { name: "About Us", link: "/about-us" },
-  { name: "Study Abroad", link: "/study-abroad" },
+  { name: "Study Abroad", link: "/studyabroad" },
   { name: "Contacts", link: "/contacts" }
 ];
     return (
@@ -26,15 +26,16 @@ const HeaderMenu = () => {
                      <button onClick={() => setModal(false)}><GrClose /></button>
                    </div>
                    <div className="modal--block">
-                    {menuItems.map((item, idx) => (
-         <h1
-           key={idx}
-           className={activeIndex === idx ? "active" : ""}
-           onClick={() => setActiveIndex(idx)}
-         >
-           {item.name}
-         </h1>
-       ))}
+          {menuItems.map((item, idx) => (
+    <a
+    key={idx}
+    href={item.link}
+    className={activeIndex === idx ? "active" : ""}
+    onClick={() => setActiveIndex(idx)}
+  >
+    {item.name}
+  </a>
+))}
        
                      <div className="modal--block__language">
                        {["EN", "RU", "KG"].map((lang, idx) => (
@@ -51,7 +52,7 @@ const HeaderMenu = () => {
                        <a><FaTelegramPlane /></a>
                        <a><PiInstagramLogoFill /></a>
                        <a><PiPhoneCallFill /></a>
-                       <a><CgMail /></a>
+                       <a><BsFillEnvelopeFill/></a>
                      </div>
                    </div>
                  </div>

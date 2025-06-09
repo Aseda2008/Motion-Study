@@ -43,7 +43,7 @@ best from others</h1>
                     </div>  
                      <div className="Best--rigth__block">
                         <img src={Partners} alt="img" />
-                        <h3>{el.info_cards[3].title}</h3>
+                      <h3>{el.info_cards[3].title}</h3>
                         <p>{el.info_cards[3].description}</p>
                     </div>
                 </div>

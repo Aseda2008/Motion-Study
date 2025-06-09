@@ -48,6 +48,7 @@ h3{
 font-weight: 400;
 color:#010D39;
 font-size: 22px;
+text-transform:lowercase;
 padding: 20px 0;
 }
 p{
@@ -104,6 +105,16 @@ padding:20px 0;
 flex-direction: column;
 padding: 40px 0;
 }
+#Best .Best--left p {
+        font-size: 11px;
+        margin: 15px 0;
+        width: 347px;
+    }
+        #Best .Best--rigth__block p {
+        font-size: 18px;
+        margin: 14px 0;
+        width: 327px;
+    }
 #Best .Best--rigth {
         gap: 30px;
         margin: 30px 0;
@@ -127,9 +138,5 @@ padding: 40px 0;
         font-weight: 500;
 
 }
-#Best .Best--rigth__block p {
-        font-size:18px;
-        margin:14px 0;
-          width: 450px;
-}
+
 }                                                    

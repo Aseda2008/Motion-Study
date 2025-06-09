@@ -2,9 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import "./Header.scss";
 import Motion from "../../../assets/img/motion.svg"
 import { IoSearchOutline } from 'react-icons/io5';
-import { CiMenuFries } from 'react-icons/ci';
 import { MotionStudyContext } from '../../../context';
-import { Link } from 'react-router-dom';
+import { AiOutlineAlignRight } from 'react-icons/ai';
 
 const Header = () => {
 const [activeIndex, setActiveIndex] = useState(null);
@@ -53,7 +52,7 @@ const menuItems = [
             </select>
           </div>
           <div className="Header--menu">
-            <a href="#" onClick={() => setModal(true)}><CiMenuFries /></a>
+            <a href="#" onClick={() => setModal(true)}><AiOutlineAlignRight /></a>
           </div>
         </div>
       </div>
