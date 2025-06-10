@@ -12,8 +12,8 @@ const HeaderMenu = () => {
     const [activeIndex, setActiveIndex] = useState(null);
     const menuItems = [
   { name: "Home", link: "/" },
-  { name: "About Us", link: "/about-us" },
-  { name: "Study Abroad", link: "/studyabroad" },
+  { name: "About Us", link: "/countriy" },
+  { name: "Study Abroad", link: "/country" },
   { name: "Contacts", link: "/contacts" }
 ];
     return (

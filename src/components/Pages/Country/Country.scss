@@ -1,5 +1,5 @@
-#StudyAbroud{
-    .StudyAbroud{
+#Country{
+    .Country{
 h1{
 font-family: "Montserrat", sans-serif;
 font-weight: 500;
@@ -56,43 +56,46 @@ font-size: 22px;
     }
 }
 @media(max-width:992px){
-#StudyAbroud .StudyAbroud--select {
+#Country .Country--select {
     display: flex;
 }
-#StudyAbroud .StudyAbroud h1 {
+#Country .Country h1 {
     font-size: 38px;
 }
-#StudyAbroud .StudyAbroud--block__country p {
+#Country .Country--block__country p {
     font-size: 22px;
 }
 }
  @media(max-width:575px){
-#StudyAbroud .StudyAbroud h1 {
+#Country .Country h1 {
         font-size: 28px;
         margin: 51px 0 29px 0;
 }
-#StudyAbroud .StudyAbroud--select h2 {
-    font-size:13px; 
+#Country .Country--select h2 {
+               font-size: 14px;
+ 
 }
-    #StudyAbroud .StudyAbroud--select h2 a {
+    #Country .Country--select h2 a {
         font-size: 25px;
         top: -1px;
     right: -28px;
     }
-#StudyAbroud .StudyAbroud--select {
-    gap: 50px;
-    flex-wrap: wrap;
-    margin: 29px 0 53px 0;
+#Country .Country--select {
+      width: 401px;
+        height: 110px;
+        gap: 87px;
+        flex-wrap: wrap;
+        margin: 21px 0 70px 0;
 }
-#StudyAbroud .StudyAbroud--block__country p {
-        font-size: 18px;
+#Country .Country--block__country p {
+        font-size: 16px;
     }
-#StudyAbroud .StudyAbroud--block {
+#Country .Country--block {
     flex-direction: column;
-    justify-content: center;
+   align-items: start;
     gap: 20px;
 }
-#StudyAbroud .StudyAbroud--block__country {
+#Country .Country--block__country {
     width: 315px;
     height: 60px;
     gap: 30px;
@@ -105,7 +108,7 @@ flex-direction:row;
 box-shadow: 0px 0px 0px 1px rgba(87, 93, 157, 1);
 
 }
-#StudyAbroud .StudyAbroud--block__country img {
+#Country .Country--block__country img {
     width: 48px;
     height: 48px;
 }

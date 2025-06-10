@@ -5,9 +5,11 @@ import Header from './components/Layout/Header/Header'
 import Main from './components/Main/Main'
 import { useContext } from 'react'
 import { MotionStudyContext } from './context'
-import StudyAbroad from './components/Pages/StudyAbroad/StudyAbroad'
+import Country from './components/Pages/Country/Country'
+import CountryUniversity from './components/Pages/CountryUniversity/CountryUniversity'
 import HeaderMenu from './components/Layout/HeaderManu/HeaderMenu'
-import Details from './components/Pages/StudyAbroad/Details/Details'
+import UniversityDetails from './components/Pages/UniversityDetails/UniversityDetails'
+
 
 function App() {
   const {modal} = useContext(MotionStudyContext)
@@ -15,23 +17,30 @@ function App() {
     {
       id:1,
       path:"/",
-      element:<Main />
+      element:<Main/>
     },
       {
       id:2,
-      path:"/studyabroad",
-      element: <StudyAbroad />
+      path:"/country",
+      element: <Country />
     },
      {
       id:3,
-      path:"/details",
-      element: <Details />
+      path:"/countrydetails/:countryID",
+      element:<CountryUniversity />
     },
+     {
+      id:4,
+      path:"/countryuniversity",
+      element:<UniversityDetails />
+    },
+    
+
   ]
   return (
  <>
   {modal ? (
-    <HeaderMenu />
+    <HeaderMenu/>
   ) : (
     <>
       <Header />

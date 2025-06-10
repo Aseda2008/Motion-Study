@@ -1,0 +1,282 @@
+#UniversityDetails{
+    .UniversityDetails{
+        h1{
+font-family: "Montserrat", sans-serif;
+font-weight: 500;
+font-size: 40px;
+color: #1AA2EE;
+margin: 60px 0;
+        }
+        &--blocks{
+            display: flex;
+            align-items: start;
+            gap: 100px;
+            img{
+            width: 554px;
+            height: 553px;
+            }
+            &__block{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 15px;
+                font-family: "Montserrat", sans-serif;
+                &--Location{
+                width: 425px;
+                border-radius: 1.84px;
+                height: 30px;
+                border: 1px solid #BBBBBB;
+                display: flex;
+                padding:10px;
+                
+                    p {
+                        
+font-weight: 500;
+font-size: 20px;
+color: #BBBBBB;
+
+                    }
+                    span{
+font-weight: 400;
+margin-left: 20px;
+font-size: 20px;
+color: #212121;
+width: 50%;
+}
+                }
+                  &--Date{
+                width: 425px;
+                height: 30px;
+                 border-radius: 1.84px;
+                border: 1px solid #BBBBBB;
+                display: flex;
+                padding: 10px;
+                              
+                    p {
+                        
+font-weight: 500;
+font-size: 20px;
+color: #BBBBBB;
+
+                    }
+                    span{
+font-weight: 400;
+margin-left: 10px;
+font-size: 20px;
+color: #212121;
+width: 50%;
+}
+                }
+                  &--Type{
+                width: 425px;
+                height:55px;
+                border: 1px solid #BBBBBB;
+                display: flex;
+                 border-radius: 1.84px;
+                padding: 10px;
+                                 
+                    p {
+                        
+font-weight: 500;
+font-size: 20px;
+color: #BBBBBB;
+
+                    }
+                    span{
+font-weight: 400;
+font-size: 20px;
+color: #212121;
+margin-left: 10px;
+width: 50%;
+}
+                }
+                  &--Specialities{
+                width: 425px;
+                height:240px;
+                 border-radius: 1.84px;
+-webkit-box-shadow: 5px 0px 10px 0px rgba(177, 178, 180, 1);
+-moz-box-shadow: 5px 0px 10px 0px rgba(177, 178, 180, 1);
+box-shadow: 5px 0px 10px 0px rgba(177, 178, 180, 1);
+                display: flex;
+                padding: 10px;
+                
+                    p {
+                        
+font-weight: 500;
+font-size: 20px;
+color: #BBBBBB;
+
+                    }
+                    span{
+font-weight: 400;
+font-size: 20px;
+color: #212121;
+width: 50%;
+margin-left: 20px;
+}
+                }
+                  &--Language{
+                width: 425px;
+                height: 30px;
+                border: 1px solid #BBBBBB;
+                display: flex;
+                 border-radius: 1.84px;
+                padding:10px;
+                              
+                    p {
+                        
+font-weight: 500;
+font-size: 20px;
+color: #BBBBBB;
+
+                    }
+                    span{
+                    margin-left: 20px;
+font-weight: 400;
+font-size: 20px;
+color: #212121;
+width: 50%;
+}
+                }
+                
+            }
+        }
+&--bottom {
+    width: 100%;
+    height: 49px;
+    background: #b0e0eb54;
+    margin: 70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    border-radius: 5px;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        position: relative;
+        padding-bottom: 5px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: red;
+            transition: width 0.3s ease;
+        }
+
+        &.active::after {
+            width: 100%;
+        }
+    }
+}
+
+    }
+}
+@media(max-width:992px){
+#UniversityDetails .UniversityDetails h1 {
+    font-size: 30px;
+    margin: 43px 0;
+}
+#UniversityDetails .UniversityDetails--blocks img {
+    width:411px;
+    height:400px;
+}
+#UniversityDetails .UniversityDetails--blocks__block--Location ,
+#UniversityDetails .UniversityDetails--blocks__block--Date ,
+#UniversityDetails .UniversityDetails--blocks__block--Language {
+        width: 286px;
+    border-radius: 1.84px;
+    height: 17px;
+    border: 1px solid #BBBBBB;
+    display: flex;
+    padding: 8px;
+}
+
+#UniversityDetails .UniversityDetails--blocks__block--Type ,
+#UniversityDetails .UniversityDetails--blocks__block--Specialities {
+  width: 286px;
+  }
+#UniversityDetails .UniversityDetails--blocks__block--Location p,
+#UniversityDetails .UniversityDetails--blocks__block--Date p,
+#UniversityDetails .UniversityDetails--blocks__block--Type p,
+#UniversityDetails .UniversityDetails--blocks__block--Specialities p,
+#UniversityDetails .UniversityDetails--blocks__block--Language  p{
+    font-weight: 400;
+    font-size: 14px;
+}
+#UniversityDetails .UniversityDetails--blocks__block--Location span,
+#UniversityDetails .UniversityDetails--blocks__block--Date span,
+#UniversityDetails .UniversityDetails--blocks__block--Type span,
+#UniversityDetails .UniversityDetails--blocks__block--Specialities span,
+#UniversityDetails .UniversityDetails--blocks__block--Language span{
+    font-size: 14px;
+
+}
+#UniversityDetails .UniversityDetails--blocks__block--Date span{
+margin-left: 0;
+}
+#UniversityDetails .UniversityDetails--blocks__block--Type {
+height: 30px;
+}
+#UniversityDetails .UniversityDetails--blocks__block--Specialities{
+height: 165px;
+}
+}
+@media(max-width:575px){
+#UniversityDetails .UniversityDetails h1 {
+        font-size: 20px;
+        margin: 28px 0;
+}
+#UniversityDetails .UniversityDetails--blocks img {
+    width:335px;
+    height:296px;
+}
+#UniversityDetails .UniversityDetails--blocks__block--Location ,
+#UniversityDetails .UniversityDetails--blocks__block--Date ,
+#UniversityDetails .UniversityDetails--blocks__block--Language {
+        width: 324px;
+        height: 34px;
+    }
+#UniversityDetails .UniversityDetails--blocks__block--Type ,
+#UniversityDetails .UniversityDetails--blocks__block--Specialities {
+  width: 286px;
+  }
+#UniversityDetails .UniversityDetails--blocks__block--Location p,
+#UniversityDetails .UniversityDetails--blocks__block--Date p,
+#UniversityDetails .UniversityDetails--blocks__block--Type p,
+#UniversityDetails .UniversityDetails--blocks__block--Specialities p,
+#UniversityDetails .UniversityDetails--blocks__block--Language  p{
+    font-size: 16px;
+}
+#UniversityDetails .UniversityDetails--blocks__block--Location span,
+#UniversityDetails .UniversityDetails--blocks__block--Date span,
+#UniversityDetails .UniversityDetails--blocks__block--Type span,
+#UniversityDetails .UniversityDetails--blocks__block--Specialities span,
+#UniversityDetails .UniversityDetails--blocks__block--Language span{
+    font-size: 16px;
+}
+#UniversityDetails .UniversityDetails--blocks__block--Date span{
+margin-left: 0;
+}
+#UniversityDetails .UniversityDetails--blocks__block--Type {
+        width: 324px;
+}
+#UniversityDetails .UniversityDetails--blocks__block--Specialities{
+        width: 324px;
+}
+#UniversityDetails .UniversityDetails--blocks{
+flex-direction: column;
+    gap: 30px;
+}
+#UniversityDetails .UniversityDetails--blocks__block--Specialities {
+        height: 190px;
+}
+}
