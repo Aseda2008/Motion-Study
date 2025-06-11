@@ -4,18 +4,7 @@ import img from "../../../assets/img/IICS.svg"
 import { BsGeoAlt } from 'react-icons/bs';
 import { GoChevronDown } from 'react-icons/go';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 const CountryUniversity = () => {
-    const [data,setData] = useState([])
-    async function getData() {
-        let res = await axios(`http://13.61.25.99/en/university/`)
-setData(res.data) 
-    }
-    useEffect(() => {
-        getData()
-    },[])
-    console.log(data,"i");
-    
     return (
         <div id="CountryUniversity">
             <div className="container">
@@ -49,7 +38,7 @@ setData(res.data)
                        <div className="CountryUniversity--blocks__block--text">
                        <div className="CountryUniversity--blocks__block--text__top">
                         <p>Name: </p>
-                        <h3>Solbrige University</h3>
+                        <Link to={`/countryuniversity`}><h3>Solbrige University</h3></Link>
                        </div>
                        <div className="CountryUniversity--blocks__block--text__center">
                         <p>Location <BsGeoAlt  /> </p>

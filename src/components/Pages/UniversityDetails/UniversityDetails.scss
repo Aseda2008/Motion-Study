@@ -144,14 +144,13 @@ width: 50%;
 &--bottom {
     width: 100%;
     height: 49px;
-    background: #b0e0eb54;
+    background: #F5F5F5;
     margin: 70px 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 0 20px;
     border-radius: 5px;
-
     a {
         text-decoration: none;
         color: inherit;
@@ -160,22 +159,39 @@ width: 50%;
         font-size: 22px;
         position: relative;
         padding-bottom: 5px;
-
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
-            height: 2px;
-            background-color: red;
-            transition: width 0.3s ease;
-        }
+        
 
         &.active::after {
             width: 100%;
         }
     }
+}
+&--Cost{
+    margin: 60px 0 300px 0;
+p{
+font-family: "Montserrat", sans-serif;
+font-weight: 400;
+font-size: 22px;
+margin: 30px 0;
+span{
+font-family: "Montserrat", sans-serif;
+font-weight: 600;
+font-size: 22px;
+color: #36ADF0;
+}
+
+}
+}
+&--Photo{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+img{
+    width: 335px;
+    height: 300px;
+}
 }
 
     }
@@ -229,6 +245,23 @@ height: 30px;
 #UniversityDetails .UniversityDetails--blocks__block--Specialities{
 height: 165px;
 }
+#UniversityDetails .UniversityDetails--Cost p,
+#UniversityDetails .UniversityDetails--Cost p span {
+    font-size: 14px;
+    margin: 19px 0;
+}
+#UniversityDetails .UniversityDetails--Cost {
+    margin: -16px 0 150px 0;
+}
+#UniversityDetails .UniversityDetails--bottom a {
+    font-size: 14px;
+    padding-bottom: 2px;
+}
+#UniversityDetails .UniversityDetails--bottom {
+
+    height: 37px;
+    margin: 70px 0;
+}
 }
 @media(max-width:575px){
 #UniversityDetails .UniversityDetails h1 {
@@ -239,6 +272,21 @@ height: 165px;
     width:335px;
     height:296px;
 }
+#UniversityDetails .UniversityDetails--Photo img {
+    width: 220px;
+    height: 203px;
+}
+#UniversityDetails .UniversityDetails--Photo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 11px;
+}
+    #UniversityDetails .UniversityDetails--bottom {
+        height: 37px;
+        margin: 27px 0;
+    }
 #UniversityDetails .UniversityDetails--blocks__block--Location ,
 #UniversityDetails .UniversityDetails--blocks__block--Date ,
 #UniversityDetails .UniversityDetails--blocks__block--Language {
@@ -278,5 +326,17 @@ flex-direction: column;
 }
 #UniversityDetails .UniversityDetails--blocks__block--Specialities {
         height: 190px;
+}
+#UniversityDetails .UniversityDetails--bottom {
+        height: 37px;
+        margin: 35px 0;
+        width: 88%;
+}
+#UniversityDetails .UniversityDetails--Cost {
+        margin: 10px 0 150px 0;
+}
+#UniversityDetails .UniversityDetails--bottom {
+        height: 37px;
+        margin: 70px 0;
 }
 }
