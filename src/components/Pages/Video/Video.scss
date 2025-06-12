@@ -1,0 +1,32 @@
+#video {
+  .video {
+    &--text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 44px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-transform: capitalize;
+      }
+    }
+    &--content {
+      padding: 70px 0 70px 70px;
+      display: flex;
+      gap: 50px;
+      overflow: scroll;
+      scrollbar-width: none;
+
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

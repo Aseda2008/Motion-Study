@@ -12,8 +12,8 @@ const Header = () => {
 
   const menuItems = [
     { name: "Home", link: "/" },
-    { name: "About Us", link: "/about-us" },
-    { name: "Study Abroad", link: "/country" }, 
+    { name: "About Us", link: "/about" },
+    { name: "Study Abroad", link: "/studyAbroad" }, 
     { name: "Contacts", link: "/contacts" }
   ];
 

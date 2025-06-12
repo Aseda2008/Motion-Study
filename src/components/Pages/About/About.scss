@@ -1,0 +1,157 @@
+#team {
+  padding-bottom: 80px;
+  .team {
+    font-family: sans-serif;
+    &--block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 50px;
+      &__cards {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &--card {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-direction: column;
+          gap: 20px;
+          width: 315px;
+          height: 419px;
+          border-radius: 5px;
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+          img {
+            width: 100%;
+          }
+          h2 {
+            font-family: sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-transform: capitalize;
+            color: rgba(0, 0, 0, 1);
+          }
+          p {
+            font-family: sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-transform: capitalize;
+            color: rgba(123, 106, 255, 0.5);
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1114px) {
+  #team {
+    .team--block__cards {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .team--block__cards--card {
+      width: 30%;
+      height: auto;
+      padding: 20px;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      h2 {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+
+    .team--block {
+      gap: 40px;
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  #team {
+    .team--block__cards {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .team--block__cards--card {
+      width: 45%;
+      height: auto;
+      padding: 15px;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      h2 {
+        font-size: 18px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+
+    .team--block {
+      gap: 40px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  #team {
+    .team--block__cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .team--block__cards--card {
+      width: 90%;
+      height: auto;
+      padding: 15px;
+
+      img {
+        height: auto;
+        object-fit: cover;
+      }
+
+      h2 {
+        font-size: 18px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+
+    .team--block {
+      gap: 20px;
+    }
+  }
+}
