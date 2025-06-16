@@ -22,8 +22,8 @@ function App() {
     { id: 2, path: "/studyAbroad", element: <StudyAbroad /> },
     { id: 3, path: "/countrydetails/:countryID", element: <CountryUniversity /> },
     { id: 4, path: "/countryuniversity", element: <UniversityDetails /> },
-    {id:5,path:"/about",element:<Team />},
-    {id:6,path:"/country",element:<Country />}
+    { id: 5, path: "/about", element: <Team /> },
+    { id: 6, path: "/country", element: <Country /> },
   ];
 
   return (
@@ -44,6 +44,7 @@ function App() {
     </>
   );
 }
+
 
 
 export default App

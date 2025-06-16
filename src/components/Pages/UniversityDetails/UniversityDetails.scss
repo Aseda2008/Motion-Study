@@ -161,9 +161,17 @@ width: 50%;
         padding-bottom: 5px;
         
 
-        &.active::after {
-            width: 100%;
-        }
+        &.active {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #d62828;
+      }
+    }
     }
 }
 &--Cost{
@@ -192,15 +200,179 @@ img{
     width: 335px;
     height: 300px;
 }
-}
+}   
+&--Description {
+display: flex;
+align-items: start;
+justify-content: space-around;
+    &__blocks {
+      .line{
+    width: 465px;
+        height: 0.5px;
+        background: #010D39;
+      }
+&--block{
+  display: flex;
+  align-items: start;
+  gap: 30px;
+  margin: 30px 0;
+  img{
+    width: 230px;
+    height: 64px;
+  }
+  h2{
+    font-family: Montserrat;
+font-weight: 400;
+font-size: 22px;
+width: 200px;
+color: #010D39;
+  }
+  p{
+    font-family: Montserrat;
+font-weight: 500;
+    font-size: 15px;
+color: #212121;
+text-transform: capitalize;
 
+  }
+  &__text{
+border-bottom: 1.0px solid #010D39;
+width: 238px;
+  padding-bottom: 20px;
+  h3{
+    font-family: Montserrat;
+font-weight: 400;
+font-size: 20px;
+color: #212121;
+
+  }
+  }
+}
+    }
+    &__apply {
+      padding-top: 40px;
+      width:448px;
+      height: 900px;
+      background: rgba(253, 253, 253, 1);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+-webkit-box-shadow: 0px 0px 9px 0px rgba(196, 196, 199, 1);
+-moz-box-shadow: 0px 0px 9px 0px rgba(196, 196, 199, 1);
+box-shadow: 0px 0px 9px 0px rgba(196, 196, 199, 1);
+border-radius: 10px;      
+font-family: "Montserrat", sans-serif;
+ &--block{
+    width: 380px;
+    height: 66px;
+    background: #1AA2EE;
+    display: flex;
+    align-items: center;
+    color: #FDFDFD;
+    justify-content: center;
+    margin: 20px 0;
+    h2{
+font-weight: 600;
+font-size: 20px;
+text-transform: capitalize;
+span{
+    font-family: Montserrat;
+font-weight: 400;
+font-size: 14px;
+text-transform: capitalize;
+}
+}
+ }
+ &--card{
+display: flex;
+gap: 30px;
+width: 372px;
+align-items: start;
+margin: 25px 0;
+&__text{
+h2{
+font-weight: 600;
+font-size: 22px;
+color: #212121;
+    }
+    p{
+color:  #212121;
     }
 }
+}
+&--ended{
+  display: flex;
+  margin: 20px 0;
+  gap: 20px;
+  h3{
+    font-family: Montserrat;
+font-weight: 700;
+font-size: 22px;
+color: #FF6A6A;
+
+
+  }
+}
+}
+}
+}
+}
+
 @media(max-width:992px){
+  #UniversityDetails .UniversityDetails--Description__blocks--block img {
+    width: 212px;
+    height: 36px;
+}
+#UniversityDetails .UniversityDetails--Description__blocks--block p {
+    font-size: 12px;
+}
+#UniversityDetails .UniversityDetails--Description__blocks--block h2 {
+        font-size: 16px;
+        font-weight: 500;
+    width: 126px;
+}
+#UniversityDetails .UniversityDetails--Description__blocks--block {
+    gap: 23px;
+    margin: 20px 0;
+}
+#UniversityDetails .UniversityDetails--Description__blocks .line {
+    width: 388px;
+}
+#UniversityDetails .UniversityDetails--Description__blocks--block__text h3 {
+    font-weight: 500;
+    font-size: 15px;
+}
+#UniversityDetails .UniversityDetails--Description__apply {
+    padding-top: 3px;
+    width: 392px;
+    height: 662px;
+}
 #UniversityDetails .UniversityDetails h1 {
     font-size: 30px;
     margin: 43px 0;
 }
+#UniversityDetails .UniversityDetails--Description__apply--card__text h2 {
+    font-weight: 500;
+    font-size: 17px;
+}
+#UniversityDetails .UniversityDetails--Description__apply--card__text p {
+    font-size: 15px;
+}
+#UniversityDetails .UniversityDetails--Description__apply--card {
+    gap: 20px;
+    width: 320px;
+    margin: 10px 0;
+}
+#UniversityDetails .UniversityDetails--Description__apply--ended h3 {
+    font-size: 18px;
+}
+#UniversityDetails .UniversityDetails--Description__apply--block h2 {
+    font-size: 17px;
+}
+#UniversityDetails .UniversityDetails--Description__apply--block h2 span {
+    font-size: 10px;
+}
+
 #UniversityDetails .UniversityDetails--blocks img {
     width:411px;
     height:400px;
@@ -215,11 +387,10 @@ img{
     display: flex;
     padding: 8px;
 }
-
 #UniversityDetails .UniversityDetails--blocks__block--Type ,
 #UniversityDetails .UniversityDetails--blocks__block--Specialities {
   width: 286px;
-  }
+}
 #UniversityDetails .UniversityDetails--blocks__block--Location p,
 #UniversityDetails .UniversityDetails--blocks__block--Date p,
 #UniversityDetails .UniversityDetails--blocks__block--Type p,
@@ -262,6 +433,7 @@ height: 165px;
     height: 37px;
     margin: 70px 0;
 }
+
 }
 @media(max-width:575px){
 #UniversityDetails .UniversityDetails h1 {
@@ -273,8 +445,8 @@ height: 165px;
     height:296px;
 }
 #UniversityDetails .UniversityDetails--Photo img {
-    width: 220px;
-    height: 203px;
+width: 170px;
+height: 162px;
 }
 #UniversityDetails .UniversityDetails--Photo {
     display: flex;
@@ -282,21 +454,21 @@ height: 165px;
     flex-wrap: wrap;
     justify-content: center;
     gap: 11px;
+    margin: 48px 0;
 }
-    #UniversityDetails .UniversityDetails--bottom {
-        height: 37px;
-        margin: 27px 0;
-    }
+#UniversityDetails .UniversityDetails--Description {
+ flex-direction: column;
+}
 #UniversityDetails .UniversityDetails--blocks__block--Location ,
 #UniversityDetails .UniversityDetails--blocks__block--Date ,
 #UniversityDetails .UniversityDetails--blocks__block--Language {
         width: 324px;
         height: 34px;
-    }
+}
 #UniversityDetails .UniversityDetails--blocks__block--Type ,
 #UniversityDetails .UniversityDetails--blocks__block--Specialities {
   width: 286px;
-  }
+}
 #UniversityDetails .UniversityDetails--blocks__block--Location p,
 #UniversityDetails .UniversityDetails--blocks__block--Date p,
 #UniversityDetails .UniversityDetails--blocks__block--Type p,
@@ -327,16 +499,40 @@ flex-direction: column;
 #UniversityDetails .UniversityDetails--blocks__block--Specialities {
         height: 190px;
 }
-#UniversityDetails .UniversityDetails--bottom {
-        height: 37px;
-        margin: 35px 0;
-        width: 88%;
-}
 #UniversityDetails .UniversityDetails--Cost {
         margin: 10px 0 150px 0;
 }
 #UniversityDetails .UniversityDetails--bottom {
         height: 37px;
-        margin: 70px 0;
+        margin: 29px 0;
+        width: 300px;
 }
+    #UniversityDetails .UniversityDetails--Description__blocks--block img {
+        width: 144px;
+        height: 32px;
+    }
+        #UniversityDetails .UniversityDetails--Description__blocks--block h2 {
+        font-size: 15px;
+        width: 100px;
+    }
+    #UniversityDetails .UniversityDetails--Description__blocks--block__text {
+    border-bottom: 1px solid #010D39;
+    width: 200px;
+    padding-bottom: 20px;
+}
+    #UniversityDetails .UniversityDetails--Description__blocks .line {
+        width: 343px;
+    }
+        #UniversityDetails .UniversityDetails--Description__apply {
+        width: 342px;
+    }
+    #UniversityDetails .UniversityDetails--Description__apply--block {
+    width: 322px;
+    margin: 17px 0;
+}
+    #UniversityDetails .UniversityDetails--Description__apply--card {
+        gap: 20px;
+        width: 279px;
+        margin: 10px 0;
+    }
 }
