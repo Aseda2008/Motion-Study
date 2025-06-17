@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import "./MotionStudy.scss"
 import Study from "../../../assets/img/homeimg.svg"
-import Ellipse4 from "../../../assets/img/Ellipse 4.svg"
-import Ellipse6 from "../../../assets/img/Ellipse 6.svg"
-import Ellipse7 from "../../../assets/img/Ellipse 7.svg"
-import Ellipse5 from "../../../assets/img/aboutMe-5 1.svg"
 import group2 from "../../../assets/img/Group 2.svg"
 import group1 from "../../../assets/img/Group 1.svg"
 import axios from 'axios';
+import  scrollArrow  from "../../../assets/img/arrows.mp4"
 
 const MotionStudy = () => {
  const [data, setData] = useState([]);
@@ -20,10 +17,7 @@ const res = await axios('/api/en/home/');
     console.error("Error fetching data:", error);
   }
 }
-
-console.log(data,"d");
-
-    useEffect(() => {
+    useEffect(() => {   
         getData();
     }, []);
 
@@ -36,8 +30,19 @@ console.log(data,"d");
                     <>
                            <div className="Study--block">
                  <div className="Study--block__left">
+                 <h3>EXPLORE THE WORLD</h3>
                     <h1>{el.title}</h1>
                     <p>{el.description}</p>
+                    <video
+  className="scroll-arrow"
+  src={scrollArrow}
+  autoPlay
+  loop
+  muted
+  playsInline
+  width="60"
+/>
+
                 </div>
                 <div className="Study--block__rigth">
                     <img src={Study} alt="img" className='bg'/>

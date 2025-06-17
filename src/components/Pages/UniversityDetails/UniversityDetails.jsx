@@ -8,8 +8,25 @@ import WhatsApp from "../../../assets/img/WhatsApp.svg"
 import instagram from "../../../assets/img/Group 21.svg"
 import telegram from "../../../assets/img/Group 24.svg"
 import WARNING from "../../../assets/img/WARNING.svg"
+import axios from 'axios';
 const UniversityDetails = () => {
   const [activeSection, setActiveSection] = useState('Description'); 
+  const [data,setData] = useState([])
+  const [universitydata,setUniversityData] = useState([])
+  async function getData() {
+const res = await axios("http://13.61.25.99/en/university_photo/");
+      setData(res.data);
+  }
+   async function getUniversityData() {
+const res = await axios("http://13.61.25.99/en/university/");
+      setUniversityData(res.data);
+  }
+  console.log(universitydata,9);
+
+  useEffect(() => {
+    getData()
+    getUniversityData()
+  },[])
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -220,12 +237,11 @@ Autumn Intake</p>
 
           {activeSection === 'Photo' && (
             <div className="UniversityDetails--Photo section">
-             <img src={Frame175} alt="img" />
-             <img src={Frame175} alt="img" />
-             <img src={Frame175} alt="img" />
-             <img src={Frame175} alt="img" />
-             <img src={Frame175} alt="img" />
-             <img src={Frame175} alt="img" />
+            {
+              data.map((el) => (
+                 <img src={el.university_photos}alt="img" />
+              ))
+            }
             </div>
           )}
         </div>

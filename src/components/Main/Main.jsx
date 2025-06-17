@@ -18,10 +18,10 @@ const Main = () => {
         :
         <>
         <MotionStudy />
-        <Best />
-        <Exams />
-        <Video />
-        <Contact />
+        {/* <Best /> */}
+        {/* <Exams /> */}
+        {/* <Video /> */}
+        {/* <Contact /> */}
         </>
        }
     </div>
